@@ -40,6 +40,8 @@ namespace WebApi
             services.AddScoped<IScheduleService, ScheduleService>();
             services.AddScoped<ICompetitionService, CompetitionService>();
             services.AddScoped<ITrainingService, TrainingService>();
+            services.AddScoped<IRoomService, RoomService>();
+            services.AddScoped<IVacationService, VacationService>();
         }
 
         // configure the HTTP request pipeline
