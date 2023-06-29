@@ -17,6 +17,8 @@ import { Informations } from '@/informations';
 import { Schedules } from '@/schedules';
 import { Competitions } from '@/competitions';
 import { Trainings } from '@/trainings';
+import { Rooms } from '@/rooms';
+import { Vacations } from '@/vacations';
 
 function App() {
     const { pathname } = useLocation();  
@@ -43,6 +45,8 @@ function App() {
                     <Route path="/schedules" component={Schedules} />
                     <Route path="/competitions" component={Competitions} />
                     <Route path="/trainings" component={Trainings} />
+                    <Route path="/rooms" component={Rooms} />
+                    <Route path="/vacations" component={Vacations} />
                     <Redirect from="*" to="/" />
                 </Switch>
             </div>

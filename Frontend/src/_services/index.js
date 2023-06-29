@@ -13,3 +13,5 @@ export * from './activity.service';
 export * from './schedule.service';
 export * from './competition.service';
 export * from './training.service';
+export * from './room.service';
+export * from './vacation.service';

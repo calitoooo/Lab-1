@@ -20,6 +20,8 @@ function Nav() {
                 <NavLink to="/schedules" className="nav-item nav-link">Schedules</NavLink>
                 <NavLink to="/competitions" className="nav-item nav-link">Competitions</NavLink>
                 <NavLink to="/trainings" className="nav-item nav-link">Trainings</NavLink>
+                <NavLink to="/rooms" className="nav-item nav-link">Rooms</NavLink>
+                <NavLink to="/vacations" className="nav-item nav-link">Vacations</NavLink>
             </div>
         </nav>
     );

@@ -14,6 +14,8 @@ using WebApi.Models.Feedbacks;
 using WebApi.Models.Trainings;
 using WebApi.Models.Schedules;
 using WebApi.Models.Competitions;
+using WebApi.Models.Rooms;
+using WebApi.Models.Vacations;
 
 namespace WebApi.Helpers
 {
@@ -50,8 +52,36 @@ namespace WebApi.Helpers
 
             CreateMap<CreateRequestF, Feedback>();
 
+            CreateMap<CreateRequestRo, Room>();
+
+            CreateMap<CreateRequestV, Vacation>();
+
             // UpdateRequest -> User
             CreateMap<UpdateRequestS, Subject>()
+                .ForAllMembers(x => x.Condition(
+                    (src, dest, prop) =>
+                    {
+                        // ignore both null & empty string properties
+                        if (prop == null) return false;
+                        if (prop.GetType() == typeof(string) && string.IsNullOrEmpty((string)prop)) return false;
+
+                        return true;
+                    }
+                ));
+
+            CreateMap<UpdateRequestV, Vacation>()
+                .ForAllMembers(x => x.Condition(
+                    (src, dest, prop) =>
+                    {
+                        // ignore both null & empty string properties
+                        if (prop == null) return false;
+                        if (prop.GetType() == typeof(string) && string.IsNullOrEmpty((string)prop)) return false;
+
+                        return true;
+                    }
+                ));
+
+            CreateMap<UpdateRequestRo, Room>()
                 .ForAllMembers(x => x.Condition(
                     (src, dest, prop) =>
                     {

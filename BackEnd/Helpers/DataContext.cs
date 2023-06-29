@@ -33,6 +33,9 @@ namespace WebApi.Helpers
         public DbSet<Schedule> Schedules { get; set; }
         public DbSet<Competition> Competitions { get; set; }
         public DbSet<Training> Trainings { get; set; }
+        public DbSet<Room> Rooms { get; set; }
+
+        public DbSet<Vacation> Vacations { get; set; }
 
     }
 }
